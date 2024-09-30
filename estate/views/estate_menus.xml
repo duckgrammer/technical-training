@@ -1,9 +1,9 @@
 <odoo>
     <menuitem id="estate_property_root" name="Estate Property">
-        <menuitem id="estate_first_level_menu" name="First Level">
+        <menuitem id="advertisement" name="Advertisements">
             <menuitem id="estate_model_menu_cation" action="estate_property_action"/>
         </menuitem>
-        <menuitem id="estate_first_level_menu" name="Settings">
+        <menuitem id="setting" name="Settings">
             <menuitem id="estate_type_model_menu_cation" action="estate_property_type_action"/>
         </menuitem>
     </menuitem>
