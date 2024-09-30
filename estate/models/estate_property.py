@@ -16,3 +16,5 @@ class EstateProperty(models.Model):
     
     active = fields.Boolean('Active', default=True)
     state = fields.Selection([("new", "New"),("received","Offer Received"),("accepted","Offer Accepted"),("sold","Sold"),("cancel","Cancelled")], required=True, copy=False, default="new")
+
+    property_type_id = fields.Many2one("estate.property.type", String="Property Type")
