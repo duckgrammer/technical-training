@@ -12,4 +12,4 @@ class EstateProperty(models.Model):
     garden_orientation = fields.Selection([("north", "North"),("east", "East"),("south", "South"),("west", "West")])
     expected_price = fields.Float(required=True)
     selling_price = fields.Float(readonly=True, copy=False)
-    availibility_date = fields.Date(copy=False, default=datetime.today())
+    availibility_date = fields.Date(copy=False, default=fields.Date.add(fields.Date.today(), months=3))
