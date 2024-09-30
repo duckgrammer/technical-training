@@ -6,6 +6,7 @@ class EstateProperty(models.Model):
 
     name = fields.Char(required=True)
     description = fields.Text()
+    postcode = fields.Integer()
     bedrooms = fields.Integer(default=2)
     garden = fields.Boolean()
     garden_orientation = fields.Selection([("north", "North"),("east", "East"),("south", "South"),("west", "West")])
