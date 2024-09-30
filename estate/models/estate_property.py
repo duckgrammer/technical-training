@@ -16,3 +16,9 @@ class EstateProperty(models.Model):
     
     active = fields.Boolean('Active', default=True)
     state = fields.Selection([("new", "New"),("received","Offer Received"),("accepted","Offer Accepted"),("sold","Sold"),("cancel","Cancelled")], required=True, copy=False, default="new")
+
+class EstatePropertyType(models.Model):
+    _name = "estate.property.type"
+    _description = "group estate property by type"
+
+    name = fields.Char(required=True)
