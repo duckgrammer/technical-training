@@ -44,10 +44,12 @@
                     <notebook>
                         <page string="Description">
                             <group>
-                                <field name="description"/>
-                                <field name="bedrooms"/>
-                                <field name="garden"/>
-                                <field name="garden_orientation"/>
+                                <group>
+                                    <field name="description"/>
+                                    <field name="bedrooms"/>
+                                    <field name="garden"/>
+                                    <field name="garden_orientation"/>
+                                </group>
                             </group>
                         </page>
                     </notebook>
