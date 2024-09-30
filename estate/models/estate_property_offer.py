@@ -20,7 +20,6 @@ class EstatePropertyOffer(models.Model):
             else:
                 record.date_deadline = fields.Date(default=fields.Date.add(fields.Date.today(), days=record.validity))
 
-    @api.depends("date_deadline", "create_date")
     def _inverse_valid(self):
         for record in self:
             record.validity = record.date_deadline - fields.Date.todate(record.create_date).days
