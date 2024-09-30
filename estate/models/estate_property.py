@@ -28,7 +28,7 @@ class EstateProperty(models.Model):
     garden_area = fields.Float()
     total_area = fields.Float(compute="_compute_area")
 
-    @api.depends("garden_area", "total_area")
+    @api.depends("garden_area", "living_area")
     def _compute_area(self):
         for record in self:
             record.total_area = record.garden_area + record.living_area
