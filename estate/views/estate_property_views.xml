@@ -11,7 +11,11 @@
         <field name="arch" type="xml">
             <tree string="Estate Tree">
                 <field name="name"/>
-                <field name="description"/>
+                <field name="postcode"/>
+                <field name="bedrooms"/>
+                <field name="expected_price"/>
+                <field name="selling_price"/>
+                <field name="availibility_date"/>
             </tree>
         </field>
     </record>
