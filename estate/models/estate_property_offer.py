@@ -8,3 +8,20 @@ class EstatePropertyOffer(models.Model):
     status = fields.Selection([('accepted', 'Accepted'),('refused','Refused')],copy=False)
     partner_id = fields.Many2one("res.partner",required=True)
     property_id = fields.Many2one("estate.property", required=True)
+
+    validity = fields.Integer(default=7)
+    date_deadlilne = fields.Date(compute="_valid_date", inverse="_inverse_valid")
+
+    @api.depends("validity", "create_date")
+    def _valid_date(self):
+        for record in self:
+            if record.create_date:
+                record.date_deadline = fields.Date(default=fields.Date.add(record.create_date, days=record.validity))
+            else:
+                record.date_deadline = fields.Date(default=fields.Date.add(fields.Date.today(), days=record.validity))
+
+    @api.depends("date_deadline", "create_date")
+    def _inverse_valid(self):
+        for record in self:
+            record.validity = record.date_deadline - fields.Date.todate(record.create_date).days
+            
