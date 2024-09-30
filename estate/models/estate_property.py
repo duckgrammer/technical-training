@@ -6,3 +6,6 @@ class EstateProperty(models.Model):
 
     name = fields.Char(required=True)
     expected_price = fields.Float(required=True)
+
+    selling_price = fields.Float(readonly=True, copy=False)
+    availibility_date = fields.Date(copy=False)
