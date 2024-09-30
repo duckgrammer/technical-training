@@ -7,7 +7,6 @@
                 <field name="price"/>
                 <field name="status"/>
                 <field name="partner_id"/>
-                <field name="property_id"/>
             </tree>
         </field>
     </record>
@@ -22,7 +21,6 @@
                         <field name="price"/>
                         <field name="status"/>
                         <field name="partner_id"/>
-                        <field name="property_id"/>
                     </group>
                 </sheet>
             </form>
