@@ -38,4 +38,4 @@ class EstateProperty(models.Model):
     @api.depends(property_offer_id.price)
     def _max_offer(self):
         for record in self:
-            record.best_price = max(record.property_offer_id.mapped('price'))
+            record.best_price = sum(record.property_offer_id.mapped('price'))
