@@ -43,10 +43,12 @@
                     </group>
                     <notebook>
                         <page string="Description">
-                            <field name="description"/>
-                            <field name="bedrooms"/>
-                            <field name="garden"/>
-                            <field name="garden_orientation"/>
+                            <group>
+                                <field name="description"/>
+                                <field name="bedrooms"/>
+                                <field name="garden"/>
+                                <field name="garden_orientation"/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
