@@ -5,3 +5,4 @@ class EstateProperty(models.Model):
     _description = "estate property table"
 
     name = fields.Char(required=True)
+    expected_price = fields.Float(required=True)
