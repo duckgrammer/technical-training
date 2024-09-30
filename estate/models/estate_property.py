@@ -35,7 +35,10 @@ class EstateProperty(models.Model):
 
     best_price = fields.Float(compute="_max_offer")
 
-    @api.depends(property_offer_id.price)
+    @api.depends("property_offer_id.price")
     def _max_offer(self):
         for record in self:
-            record.best_price = sum(record.property_offer_id.mapped('price'))
+            if record.property_offer_id:
+                record.best_price = sum(record.property_offer_id.mapped('price'))
+            else:
+                record.best_price=0
