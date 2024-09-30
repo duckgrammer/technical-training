@@ -9,10 +9,10 @@
         <field name="name">estate.property.tree</field>
         <field name="res_model">estate.property</field>
         <field name="arch" type="xml">
-            <tree string="Estate Tree">
+            <list string="Estate Tree">
                 <field name="name"/>
                 <field name="description"/>
-            </tree>
+            </list>
         </field>
     </record>
 </odoo>
