@@ -33,15 +33,20 @@
                     </div>
                     <group>
                         <group>
-                            <field name="name"/>
+                            <field name="postcode"/>
+                            <field name="availibility_date"/>
                         </group>
                         <group>
-                            <field name="postcode"/>
+                            <field name="expected_price"/>
+                            <field name="selling_price"/>
                         </group>
                     </group>
                     <notebook>
                         <page string="Description">
                             <field name="description"/>
+                            <field name="bedrooms"/>
+                            <field name="garden"/>
+                            <field name="garden_orientation"/>
                         </page>
                     </notebook>
                 </sheet>
