@@ -12,18 +12,18 @@
         </field>
     </record>
 
-        <record id="estate_property_offer_view_form" model="ir.ui.view">
-            <field name="name">estate.property.offer.form</field>
-            <field name="model">estate.property.offer</field>
-            <field name="arch" type="xml">
+    <record id="estate_property_offer_view_form" model="ir.ui.view">
+        <field name="name">estate.property.offer.form</field>
+        <field name="model">estate.property.offer</field>
+        <field name="arch" type="xml">
+            <form string="Estate Offer">
                 <sheet>
-                    <form string="Estate Offer">
-                        <field name="price"/>
-                        <field name="status"/>
-                        <field name="partner_id"/>
-                        <field name="property_id"/>
-                    </form>
+                    <field name="price"/>
+                    <field name="status"/>
+                    <field name="partner_id"/>
+                    <field name="property_id"/>
                 </sheet>
-            </field>
-        </record>
+            </form>
+        </field>
+    </record>
 </odoo>
