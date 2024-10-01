@@ -80,5 +80,5 @@ class EstateProperty(models.Model):
     @api.model
     def ondelete(self, vals):
         for record in self:
-            if record.state != "new" and record.state != "cancel":
+            if record.state not in ("new", "cancel"):
                 raise UserError(_('Only New and Cancelled properties can be deleted.'))
