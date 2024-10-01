@@ -46,6 +46,10 @@
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <form string="Estate Form">
+                <header>
+                    <button name="cancel_property" type="object" string="Cancel"/>
+                    <button name="sold_property" type="object" string="Sold"/>
+                </header>
                 <sheet>
                     <div class="oe_title">
                         <h1>
