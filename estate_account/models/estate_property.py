@@ -8,7 +8,7 @@ class EstateProperty(models.Model):
         for record in self:
             vals_list.append({
                 "partner_id": record.buyer,
-                "move_types": "out_invoice",
+                "move_type": "out_invoice",
                 "line_ids": [
                     Command.create({
                         "name": "administrative fees",
