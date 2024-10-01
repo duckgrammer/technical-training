@@ -34,3 +34,9 @@ class EstatePropertyOffer(models.Model):
         ('check_offer_price', 'CHECK(price >= 0)',
          'The price must be strictly positive'),
     ]
+
+    @api.model
+    def _recieve_offer(self, vals):
+        property = super().create(vals)
+        property.state = "received"
+        return property
