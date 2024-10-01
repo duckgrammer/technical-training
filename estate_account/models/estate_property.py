@@ -12,7 +12,7 @@ class EstateProperty(models.Model):
                 "move_type": "out_invoice",
                 "line_ids": [
                     Command.create({
-                        "name": record.name+" invoice 6%",
+                        "name": record.name+" invoice 6% of "+str(record.selling_price),
                         "quantity": 1,
                         "price_unit": record.selling_price*0.06,
                     }),
