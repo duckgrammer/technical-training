@@ -36,7 +36,7 @@ class EstatePropertyOffer(models.Model):
     ]
 
     @api.model
-    def _recieve_offer(self, vals):
+    def create(self, vals):
         property = super().create(vals)
         property.state = "received"
         return property
