@@ -38,6 +38,6 @@ class EstatePropertyOffer(models.Model):
     @api.model
     def create(self, vals):
         for val in vals:
-            property = self.env['estate.property'].browse(val['state'])
+            property = self.env['estate.property'].browse(val)
             property.state = "received"
         return super().create(vals)
