@@ -63,4 +63,4 @@ class EstateProperty(models.Model):
         if self.state != "cancel":
             self.state = "sold"
         else:
-            raise UserError(_('I canclled property can\'t be sold'))
+            raise UserError(_('I cancelled property can\'t be sold'))
