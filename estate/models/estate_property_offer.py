@@ -35,9 +35,9 @@ class EstatePropertyOffer(models.Model):
          'The price must be strictly positive'),
     ]
 
-    @api.model
-    def create(self, vals):
-        for val in vals:
-            property = self.env['estate.property'].browse(val)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            property = self.env['estate.property'].browse(vals['property_id'])
             property.state = "received"
-        return super().create(vals)
+        return super().create(vals_list)
