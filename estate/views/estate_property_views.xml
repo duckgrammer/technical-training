@@ -59,6 +59,7 @@
                     </div>
                     <group>
                         <group>
+                            <field name="state"/>
                             <field name="property_type_id"/>
                             <field name="postcode"/>
                             <field name="availibility_date"/>
