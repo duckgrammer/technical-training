@@ -31,6 +31,6 @@ class EstatePropertyOffer(models.Model):
         self.status = "refused"
 
     _sql_constraints = [
-        ('price', 'CHECK(price >= 0)',
+        ('check_offer_price', 'CHECK(price >= 0)',
          'The price must be strictly positive'),
     ]

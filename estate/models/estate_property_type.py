@@ -5,3 +5,8 @@ class EstatePropertyType(models.Model):
     _description = "group estate property by type"
 
     name = fields.Char(required=True)
+
+    _sql_constraints = [
+        ('unique_type', 'UNIQUE(name)',
+         'The name must be unique.'),
+    ]
