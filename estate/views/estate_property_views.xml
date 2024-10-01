@@ -33,8 +33,8 @@
                     <t t-name="kanban-box">
                         <div class="oe_kanban_global_click">
                             <field name="name"/>
-                            <field name="expected_price"/>
-                            <field name="selling_price"/>
+                            <div><field name="expected_price"/></div>
+                            <div><field name="selling_price"/></div>
                             <field name="property_tag_id" widget="many2many_tags"/>
                         </div>
                     </t>
